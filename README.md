@@ -14,6 +14,9 @@ B = [4,5,6].
 % Expressions are terminated with a period `.`, for example, the variables
 % above are all terminated.
 
+% Functions with multiple heads terminate with a semicolon unless they
+% are the last function, when they terminate with a period.
+
 % Anonymous functions. Note that the argument _must_ be wrapped in parentheses.
 > (fun (X) -> X * X end)(2).
 4
@@ -24,6 +27,10 @@ B = [4,5,6].
 % rule must be adhered to.
 -module(first).
 -export([double/2]).
+
+% Function calls from outside the module must be fully qualified
+> first:double(2)
+4
 ```
 
 
