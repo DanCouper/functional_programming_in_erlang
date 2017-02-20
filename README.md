@@ -31,6 +31,17 @@ B = [4,5,6].
 % Function calls from outside the module must be fully qualified
 > first:double(2)
 4
+
+% Atoms start with a lowercase letter
+> foo.
+foo
+
+% Numbers can have a base (an int between 2 and 36) specified, in the
+% form `base#number`
+> 10#100.
+100
+> 2#100.
+4
 ```
 
 
