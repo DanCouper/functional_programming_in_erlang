@@ -2,7 +2,9 @@
 
 Workthrough of [this FutureLearn course](https://www.futurelearn.com/courses/functional-programming-erlang/) run by the University of Kent.
 
-## Differences from Elixir
+## Syntax Notes
+
+See the page on [Learn X in Y minutes](https://learnxinyminutes.com/docs/erlang/) for a quick overview.
 
 ```
 % Comment lines use `%`. Multiline comments aren't supported
@@ -44,7 +46,5 @@ foo
 4
 ```
 
-
-## Week 1: Basics
 
 
