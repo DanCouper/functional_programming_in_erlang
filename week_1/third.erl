@@ -1,5 +1,5 @@
 -module(third).
--export([xOr_1/2,xOr_2/2,xOr_3/2,xOr_4/2,xOr_5/2,xOr_6/2]).
+-export([xOr_1/2,xOr_2/2,xOr_3/2,xOr_4/2,xOr_5/2,xOr_6/2,xOr_7/2]).
 
 
 xOr_1(true,false) ->
@@ -39,3 +39,6 @@ xOr_6(X,Y) ->
     true -> false;
     false -> true
   end.
+
+xOr_7(X,Y) ->
+  not(X == Y).
