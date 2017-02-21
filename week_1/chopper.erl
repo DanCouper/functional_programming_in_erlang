@@ -1,6 +1,10 @@
 -module(chopper).
 -export([pieces/1,pieces3D/1]).
 
+%% Very simple non-tail recursive
+simple_pieces(0) -> 1;
+simple_pieces(N) -> N + pieces(N-1).
+
 %% Specify how many regions on a 2D plane can be created with `N` cuts.
 %% [Equation taken from cut-the-knot.com](http://www.cut-the-knot.org/proofs/LinesDividePlane.shtml).
 pieces(N) ->

@@ -1,6 +1,12 @@
 -module(fibonacci).
 -export([fib/1]).
 
+%% Simple non-tail recursive fib:
+simpleFib(0) -> 0;
+simpleFib(1) -> 1;
+simpleFib(N) -> fib(N-2) + fib(N-1).
+
+
 %% Simple recursive fibonacci function: find the nth fibonacci number.
 %%    1. fib(4)
 %%    2. fib(4,0,1)
