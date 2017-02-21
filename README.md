@@ -1,5 +1,11 @@
 # Functional Programming in Erlang
 
+> The Erlang philosophy for "let it fail" -- if we're writing a process
+> or function to do something, and it fails, we let it fail because we
+> want the caller to take responsibility...you design things for correct
+> operation, and then other parts of the system will be designed to handle
+> error...so it's not defensive programming, it's offensive programming.
+
 Workthrough of [this FutureLearn course](https://www.futurelearn.com/courses/functional-programming-erlang/) run by the University of Kent.
 
 ## Syntax Notes
