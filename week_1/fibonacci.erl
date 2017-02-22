@@ -24,7 +24,8 @@ fib(T) -> fib(T,0,1).
 % Guard takes into account that 0 and 1
 % are special cases, so stop at third
 % in fib sequence (1).
-fib(T,Prev,Curr) when T>1 ->
-  fib(T-1,Curr,Prev+Curr);
-fib(_T,_Prev,Curr) ->
-  Curr.
+fib(0,Prev,_Curr) ->
+  Prev;
+fib(T,Prev,Curr) ->
+  fib(T-1,Curr,Prev+Curr).
+
