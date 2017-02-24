@@ -13,14 +13,6 @@
           vertices=[] :: [] | [{number(),number()}]
         }).
 
-%%% Functions for calculating the perimeter and area of regular
-%%% polygons. Take a tuple `{Sides,{X,Y},Radius}` where radius is the
-%%% distance of the centre point to any vertex.
-
-%calculateArea({}) ->
-%calculateVertices({}) ->
-%calculateApothem(Sides,Radius) ->
-
 -spec(shapeFactory(atom(),integer(),{number(),number()},number()) -> #shape{}).
 shapeFactory(_,Sides,_,_) when Sides == 0; Sides == 2 ->
   {error, "Polygon cannot have " ++ lists:concat([Sides]) ++ " sides."};
