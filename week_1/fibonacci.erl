@@ -29,3 +29,13 @@ fib(0,Prev,_Curr) ->
 fib(T,Prev,Curr) ->
   fib(T-1,Curr,Prev+Curr).
 
+
+%% Return pairs of fibonacci numbers. The reason for this is
+%% to move the two accumulators out of the function definition.
+%% The return value is more complex, but the `fib/1` function can
+%% be defined that extracts the correct value from the fibP/1 function.
+fibP(O) ->
+  {0,1};
+fibP(T) ->
+  {Prev,Curr} = fibP(T-1),
+  {Curr,Prev+1}.
