@@ -1,11 +1,15 @@
 -module(bitcalc).
--export([bitsTRec/1]).
+-export([bits/1]).
 
-bitsTRec(N) ->
-  bitsTRec(N,0).
+%% Given a number N, returns the sum of the
+%% bits in a binary representation of N.
+%% NOTE I may be being an idiot here, but I couldn't
+%% figure out a direct-recursive version.
+bits(N) ->
+  bits(N,0).
 
-bitsTRec(0,Acc) ->
+bits(0,Acc) ->
   Acc;
-bitsTRec(N,Acc) ->
-  bitsTRec(N bsr 1, (N band 1)+Acc).
+bits(N,Acc) ->
+  bits(N bsr 1, (N band 1)+Acc).
 
