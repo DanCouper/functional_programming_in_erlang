@@ -35,7 +35,7 @@
 
 -spec(constructRegular(integer(),number()) -> #shape{}).
 constructRegular(Sides,_) when Sides == 0; Sides == 2 ->
-  {error, "Polygon cannot have " ++ lists:concat([Sides]) ++ " sides."};
+  {error, "Really, that many sides? That won't work, please try again with a sensible number."};
 constructRegular(Sides,_) when Sides > 100 ->
   {error, "Couldn't face building a name generator for polygons with sides > 100."};
 constructRegular(Sides,Radius) ->
