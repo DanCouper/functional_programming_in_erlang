@@ -1,10 +1,13 @@
 -module(bitcalc).
--export([bits/1]).
+-export([bits/1,bitsRec/1]).
 
 %% Given a number N, returns the sum of the
 %% bits in a binary representation of N.
-%% NOTE I may be being an idiot here, but I couldn't
-%% figure out a direct-recursive version.
+bitsRec(0) -> 0;
+bitsRec(N) ->
+  (N band 1) + bitsRec(N bsr 1).
+
+
 bits(N) ->
   bits(N,0).
 
