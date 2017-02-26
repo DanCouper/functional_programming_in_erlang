@@ -15,7 +15,7 @@ pieces(N) ->
 pieces3D(N) ->
   binomial(N,3) + binomial(N,2) + binomial(N,1) + binomial(N,0).
 
-% Note converted from a Haskell example
+% NOTE not original, got lost in the math, so adapted this from a Haskell example:
 binomial(N,0) ->
   1;
 binomial(N,K) when is_integer(N), is_integer(K), (N>=0), (K>=0), (N>=K) ->
