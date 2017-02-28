@@ -1,9 +1,9 @@
 -module(chopper).
--export([pieces/1,pieces3D/1]).
+-export([pieces/1,pieces3D/1,simple_pieces/1]).
 
 %% Very simple non-tail recursive
 simple_pieces(0) -> 1;
-simple_pieces(N) -> N + pieces(N-1).
+simple_pieces(N) -> N + simple_pieces(N-1).
 
 %% Specify how many regions on a 2D plane can be created with `N` cuts.
 %% [Equation taken from cut-the-knot.com](http://www.cut-the-knot.org/proofs/LinesDividePlane.shtml).
@@ -15,7 +15,7 @@ pieces(N) ->
 pieces3D(N) ->
   binomial(N,3) + binomial(N,2) + binomial(N,1) + binomial(N,0).
 
-% Note converted from a Haskell example
+% NOTE not original, got lost in the math, so adapted this from a Haskell example:
 binomial(N,0) ->
   1;
 binomial(N,K) when is_integer(N), is_integer(K), (N>=0), (K>=0), (N>=K) ->
